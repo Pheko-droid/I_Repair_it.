@@ -12,7 +12,7 @@ body{
 }
 /* Enhancing the typography for headings */
 h1, h2 {
-  color: darkorange;
+  color: teal;
   margin-bottom: 1rem;
 }
 /* Navigation bar styling */
@@ -45,11 +45,77 @@ h1, h2 {
 /* Styling for the individual navigation links */
 .nav-links a{
   text-decoration: none;
-  color: #1E1E1E;
+  color: #2d3436;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 /* Hover effect gives visual feedback to the user that its clickable */
 .nav-links a:hover {
-  color: #0984E3;
+  color: teal;
+}
+.burger{
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Hero section styling */
+.hero{
+  background: linear-gradient (125deg,teal 0%, lightblue 100%);
+  color: off white;
+  text-align: center;
+  padding: 4rem 1,5rem;
+}
+.hero h1{
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+.hero p{
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+/* Sections styling */
+.section {
+  padding: 4rem 1.5rem;
+}
+.container section:first-child{
+  padding-top: 0;
+}
+h2{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: teal;
+}
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: -1rem auto 3rem auto;
+  color: #4a5b52;
+}
+.pillars h3{
+  color: #0f3b2c;
+  margin-bottom: 0.75rem;
+}
+/* Services grid styling */
+.services-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 5%;
+}
+/* Modern Glassmorphism card layer */
+/* the service-card will have a vertical gradient blending pure white with off white tint*/
+.service-card{
+background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,247,250,0.6));
+/* the glass blur layer */
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.4);
+padding: 2.5rem 2rem;
+box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+/* Smooth transforma physics for the lift animation */
+transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+text-align: center;
 }
