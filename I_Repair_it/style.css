@@ -15,3 +15,41 @@ h1, h2 {
   color: darkorange;
   margin-bottom: 1rem;
 }
+/* Navigation bar styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/*Logo styling */
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: darkorange;
+  letter-spacing: 1px;
+}
+/* Flexbox for the list elements to align them horizontally */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+/* Styling for the individual navigation links */
+.nav-links a{
+  text-decoration: none;
+  color: #1E1E1E;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+/* Hover effect gives visual feedback to the user that its clickable */
+.nav-links a:hover {
+  color: #0984E3;
+}
