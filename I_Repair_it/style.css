@@ -119,3 +119,30 @@ box-shadow: 0 8px 32px rgba(0,0,0,0.05);
 transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 text-align: center;
 }
+/*Card hover effect for interactivity */
+.service-card:hover{
+  transform: translate(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+/* Base styling for icons in the service cards */
+.service-card.icon{
+font-size: 3rem;
+margin-bottom: 1.5rem;
+display: inline-block;
+animation: floatIcon 3.5s ease-in-out infinite;
+}
+/* Icon Color Mapping faccording to the service type */
+.icon-electrical { color: #FF9F43; filter: drop-shadow(0 4px 12px rgba(255,159,67,0.35));}
+.icon-plumbing { color: #0984E3; filter: drop-shadow(0 4px 12px rgba(9,132,227,0.35));}
+.icon-general { color: #747D8C; filter: drop-shadow(0 4px 12px rgba(116,125,140,0.35));}
+.icon-painter {color:aqua; filter: drop-shadow(0 4px 12px rgba(0,255,255,0.35));}
+.icon-automotive {color: #FF6B6B; filter: drop-shadow(0 4px 12px rgba(255,107,107,0.35));}
+.icon-carpentry {color: #A4B0BE; filter: drop-shadow(0 4px 12px rgba(164,176,190,0.35));}
+.icon-construction {color: darkgrey; filter: drop-shadow(0 4px 12px rgba(0,255,255,0.35));}
+
+/* Continous Flaoting keyframe Animation*/
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-6px);}
+  100% {transform: translateY(0px);}
+}
