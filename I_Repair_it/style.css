@@ -1,3 +1,50 @@
+/* Full-screen dark overlay container with glassmorphism */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.85); /* Clean light */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+/* Centering the loader content and styling */
+.loader-content{
+  text-align: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+/* High-end dual-ring spinner with smooth animation */
+.spinner{
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(0,128,128, 0.15); /* Subtle teal tint */
+  border-radius: 50%;
+  border-top-color: darkorange; /* Vibrant accent color */
+  border-right-color: teal; /* Secondary accent color */
+  margin: 0 auto 1.5rem;
+  animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite; /* Smooth and dynamic easing */
+}
+/* Loading Typography */
+.loader-content h2 {
+  color: darkorange;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin: 0 0 0.5rem 0;
+}
+.loader-content p {
+  color:#2d3436; /* deep charcoal for readability */
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -119,6 +166,21 @@ box-shadow: 0 8px 32px rgba(0,0,0,0.05);
 transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 text-align: center;
 }
+/* Enhancing the gallery section and image styling */
+.gallery-grid img{
+  width: 80%;
+  height: 110px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  /* Smooth scaling transition for hover effect */
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+/* Hover effect for gallery images: Image zoom slight and sharpens */
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
 /*Card hover effect for interactivity */
 .service-card:hover{
   transform: translate(-8px);
@@ -130,6 +192,27 @@ font-size: 3rem;
 margin-bottom: 1.5rem;
 display: inline-block;
 animation: floatIcon 3.5s ease-in-out infinite;
+}
+/* Contact Information */
+.contact-info {
+  text-align: center;
+  background: #e9f5ef;
+  padding: 2rem;
+  border-radius: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-info p{
+  margin: 0.5rem 0;
+}
+.contact-info i{
+  margin-right: 0.5rem;
+  color: teal;
+}
+.social-icons i{
+  font-size: 30px;
+  margin: 10px;
+  transition: color 0.3s ease;
 }
 /* Icon Color Mapping faccording to the service type */
 .icon-electrical { color: #FF9F43; filter: drop-shadow(0 4px 12px rgba(255,159,67,0.35));}
@@ -145,4 +228,9 @@ animation: floatIcon 3.5s ease-in-out infinite;
   0% {transform: translateY(0px);}
   50% {transform: translateY(-6px);}
   100% {transform: translateY(0px);}
+}
+/* Rotation mathematical translation keyframe */
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }

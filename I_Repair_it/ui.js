@@ -46,7 +46,13 @@ const renderServices = (servicesToDisplay) => {
             <p>${service.description}</p>
             <button class="book-btn" style="background-color: darkorange; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: bold; cursor: pointer;">
               Request Service
+              <span class="service-icon" ${iconClasses[service.id] || ''}>${service.icon}</span>
               </button>
               </div>
               `).join('');
+        window.addEventListener('load', () => {
+          const loader = document.getElementById('loading-screen');
+          loader.style.opacity = '0';
+          setTimeout(() => loader.remove(), 500);
+        });
             
