@@ -67,9 +67,11 @@ h1, h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1.2rem 8%;
+  background-color: rgba(255, 255, 255, 0.85); /* Clean light background */
+  backdrop-filter: blur(16px); /* Subtle glass blur */
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Light border for definition */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -93,12 +95,29 @@ h1, h2 {
 .nav-links a{
   text-decoration: none;
   color: #2d3436;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  padding: 0.5rem 0;
   transition: color 0.3s ease;
 }
 /* Hover effect gives visual feedback to the user that its clickable */
 .nav-links a:hover {
-  color: teal;
+  color: darkorange;
+}
+.nav-links a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, darkorange, teal);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
 }
 .burger{
   display: none;
@@ -166,20 +185,28 @@ box-shadow: 0 8px 32px rgba(0,0,0,0.05);
 transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 text-align: center;
 }
+/* Gallery Section Configuration */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
 /* Enhancing the gallery section and image styling */
 .gallery-grid img{
-  width: 80%;
-  height: 110px;
+  width: 100%;
+  height: 240px;
   object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Subtle shadow for depth */
   /* Smooth scaling transition for hover effect */
-  transition: transform 0.5s ease, filter 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),filter 0.4s ease;
 }
 /* Hover effect for gallery images: Image zoom slight and sharpens */
 .gallery-grid img:hover {
-  transform: scale(1.04);
-  filter: brightness(1.05);
+  transform: translateY(-6px) scale(1.05);
+  filter: brightness(1.05) contrast(1.03);
+  box-shadow: 0 12px 28px rgba(0, 128, 128, 0.15); /* Glowing teal shadow drop */
 }
 /*Card hover effect for interactivity */
 .service-card:hover{
