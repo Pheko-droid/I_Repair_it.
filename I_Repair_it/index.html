@@ -7,6 +7,10 @@
     <meta name="keywords" content="Home, Repairs, township services, plumber, electrician, builder, carpenter, painter, reliable, kasi, South Africa.">
     <meta name="author" content="I-Repair-it.">
     <title>I-Repair-it | Home Repairs</title>
+    <link rel="data" href="data.js">
+    <link rel="ui" href="ui.js">
+    <link rel="filter" href="filter.js">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -23,11 +27,15 @@
   </nav>
 </header>
 <body>
+  <script src=" data.js"></script>
+  <script src="ui.js"></script>
+  <script src="filters.js"></script>
+ 
   <!--Loading Screen-->
   <div id="loading-screen">
     <div class="loader-content">
       <div class="spinner"></div>
-      <p>Connecting you with trusted local artisans</p>
+      <p>Connecting you with Service Providers</p>
     </div>
   </div>
   <!--Hero Section-->
@@ -72,7 +80,7 @@
 <section id="services">
  <div class="container">
   <h2>Our Services</h2>
-  <div class="services-grid">
+  <div id="servicesGrid" class="services-grid">
     <div class="service-card"><i class="fas fa-tools"></i><h3>Plumbing</h3><p>Reliable plumbing services for all your home needs.</p></div>
     <div class="service-card"><i class="fas fa-bolt"></i><h3>Electrical</h3><p>Expert electrical work to keep your home safe and functional.</p></div>
     <div class="service-card"><i class="fas fa-hammer"></i><h3>General Repairs</h3><p>Comprehensive repair services for any household issues.</p></div> 
@@ -123,16 +131,18 @@
                 <img src="Images/builders/builders3.jpg" width="200" height="200" alt="A builder, working on a roof.">
                 <img src="Images/builders/builder4taking_measurements.jpg" width="200" height="200" alt="A builder taking measurements of a wall.">
               </div> 
-     <section id="gallery" style="background:#fefcf5;">
+     
+              <section id="gallery" style="background:#fefcf5;">
       <div class="container">
         <h2>Carpentry Services</h2>
-        <img src="Images/carpenters/fixing-the-roof.jpg" width="150" height="100" alt="A professional carpenter fixing the roof of a house">
-        <img src="Images/carpenters/making-a-table.jpg" width="150" height="100" alt="A professional carpenter making a table for a client">
-        <img src="Images/carpenters/working.jpg" width="150" height="100" alt="A professional carpenter working on a project.">
-        <img src="Images/carpenters/working2.jpg" width="150" height="100" alt="A professional carpenter working on a project.">
+        <img src="Images/carpenters/fixing-the-roof.jpg" width="200" height="200" alt="A professional carpenter fixing the roof of a house">
+        <img src="Images/carpenters/making-a-table.jpg" width="200" height="200" alt="A professional carpenter making a table for a client">
+        <img src="Images/carpenters/working.jpg" width="200" height="200" alt="A professional carpenter working on a project.">
+        <img src="Images/carpenters/working2.jpg" width="200" height="200" alt="A professional carpenter working on a project.">
       </div>
      </section>
-        <section id="gallery" style="background: lightgrey;">
+       
+     <section id="gallery" style="background: lightgrey;">
           <div class="container">
             <h2>Automotive Services</h2>
             <img src="Images/mechanics/fixing-a-bike.jpg" width="200" height="200" alt="A mechanic fixing a bicycle, thats broken.">
@@ -142,6 +152,7 @@
           </div>
         </section>
             </div>
+       
           </section>
        <!---Contact Information--->
        <section id="contact">
@@ -156,18 +167,19 @@
           </a>
         </div>
        </section>
-       
-       
         </div>
         </div>
       </section>
     </div>  
   </div>
 
-
-
 </section>
 </main>
+<!--Load all my external Javascript files at the end-->
+<script src="data.js"></script>
+<script src="ui.js"></script>
+<script src="filter.js"></script>
+<script src="manifest.json"></script>
+<script src="sw.js"></script>
 </body>
-
 </html>

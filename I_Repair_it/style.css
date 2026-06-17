@@ -188,17 +188,19 @@ text-align: center;
 /* Gallery Section Configuration */
 .gallery-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
   padding: 2rem 0;
 }
 /* Enhancing the gallery section and image styling */
 .gallery-grid img{
   width: 100%;
-  height: 240px;
+  height: 150px;
   object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Subtle shadow for depth */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.01); /* Subtle shadow for depth */
   /* Smooth scaling transition for hover effect */
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),filter 0.4s ease;
 }
@@ -260,4 +262,7 @@ animation: floatIcon 3.5s ease-in-out infinite;
 @keyframes spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
+}
+#loading-screen {
+ display: none !important;
 }
