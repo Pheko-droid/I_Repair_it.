@@ -1,5 +1,5 @@
 // Logic for filter.js
-export const filterServices = (services, searchTerm) => {
+ const filterServices = (services, searchTerm) => {
   const cleanTerm = searchTerm.toLowerCase().trim();
 if (!cleanTerm) {
   return services;

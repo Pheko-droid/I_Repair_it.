@@ -1,5 +1,5 @@
 // data.js 
-export const repairServices = [
+const repairServices = [
 {
   id: 1,
   title: "Electrical Repair Services",
