@@ -46,3 +46,8 @@ const renderServices = (servicesToDisplay) => {
 
   removeLoadingScreen();
 };
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof repairServices !== 'undefined') {
+    renderServices(repairServices);
+  }
+});

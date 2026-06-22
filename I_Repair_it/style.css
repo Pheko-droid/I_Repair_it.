@@ -195,7 +195,7 @@ text-align: center;
   padding: 2rem 0;
 }
 /* Enhancing the gallery section and image styling */
-.gallery-grid img{
+.gallery-grid Img{
   width: 100%;
   height: 150px;
   object-fit: cover; /* Ensures the image covers the area without distortion */
@@ -229,19 +229,27 @@ animation: floatIcon 3.5s ease-in-out infinite;
   padding: 2rem;
   border-radius: 24px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 .contact-info p{
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
 }
 .contact-info i{
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   color: teal;
+  width: 1.5rem;
 }
 .social-icons i{
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
   margin: 10px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons:hover {
+  color: darkorange;
+  transform: scale(1.1);
 }
 /* Icon Color Mapping faccording to the service type */
 .icon-electrical { color: #FF9F43; filter: drop-shadow(0 4px 12px rgba(255,159,67,0.35));}
