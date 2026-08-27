@@ -1,45 +1,53 @@
-// data.js 
+// data.js
 const repairServices = [
 {
   id: 1,
   title: "Electrical Repair Services",
-  description: "Safe wiring and socket repairs for your home.",
-  icon: "⚡"
+  description: "Safe wiring, socket repairs, and electrical installations for your home.",
+  icon: "⚡",
+  category: "electrical"
 },
 {
   id: 2,
   title: "Plumbing Services",
-  description: "Fixing Leaks, Clogged Drains, taps, and pipes quickly.",
-  icon: "🚰"
+  description: "Fixing leaks, clogged drains, taps, and pipes quickly and reliably.",
+  icon: "🚰",
+  category: "plumbing"
+
 },
 {
-id: 3,
-title: "Appliance Repair Services",
-description: "Repairing refrigerators, washing machines, and more.",
-icon: "🔧"
+  id: 3,
+  title: "Appliance Repair Services",
+  description: "Repairing refrigerators, washing machines, and more.",
+  icon: "🔧",
+  category: "appliance"
 },
 {
-id: 4,
-title: "Car Mechanic Services",
-description: "Expert car repairs and maintenance services.",
-icon: "🚗"
+  id: 4,
+  title: "Car Mechanic Services",
+  description: "Expert car repairs and maintenance services.",
+  icon: "🚗",
+  category: "automotive"
 },
 {
   id: 5,
-  title: "Carpentery Services",
+  title: "Carpentry Services",
   description: "Skilled carpenters for furniture and home repairs.",
-  icon: "🪚"
+  icon: "🪚",
+  category: "carpentry"
 },
 {
   id: 6,
-  title: "painting Services",
+  title: "Painting Services",
   description: "Professional painting services for your home and office.",
-  icon: "🎨"
+  icon: "🎨",
+  category: "painting"
 },
 {
   id: 7,
-  title: "Building Repair Services",
+  title: "Building & Construction",
   description: "Comprehensive building repair and maintenance solutions.",
-  icon: "🏢"
-},
+  icon: "🏢",
+  category: "construction"
+}
 ];

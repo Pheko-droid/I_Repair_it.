@@ -78,7 +78,29 @@
   <!-- Service cards will be dynamically inserted here -->
 <section id="services">
  <div class="container">
+
+  <!-- Search bar -->
+  <div class="category-filter-wrapper">
+ <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search services...">
+  </div>
+ <!-- Category filter search buttons-->
+  <div class="filter-buttons">
+    <button onclick="filterByCategory('all')">All</button>
+    <button onclick="filterByCategory('plumbing')">Plumbing</button>
+    <button onclick="filterByCategory('electrical')">Electrical</button>
+    <button onclick="filterByCategory('general-repairs')">General Repairs</button>
+    <button onclick="filterByCategory('painting')">Painting</button>
+  </div>
+  </div>
+
   <h2>Our Services</h2>
+  <!--Dynamic Services Grid-->
+  <div id="servicesGrid" class="services-grid">
+    <!-- Service cards will be dynamically inserted here -->
+     </div>
+  </div>
+</section>
   <div id="servicesGrid" class="services-grid">
     <div class="service-card"><i class="fas fa-tools"></i><h3>Plumbing</h3><p>Reliable plumbing services for all your home needs.</p></div>
     <div class="service-card"><i class="fas fa-bolt"></i><h3>Electrical</h3><p>Expert electrical work to keep your home safe and functional.</p></div>
